@@ -13,8 +13,11 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        MainWindow.cpp
+        MainWindow.cpp \
+    ProgressMessageBox.cpp
 
-HEADERS  += MainWindow.h
+HEADERS  += MainWindow.h \
+    ProgressMessageBox.h
 
-FORMS    += MainWindow.ui
+FORMS    += MainWindow.ui \
+    ProgressMessageBox.ui

@@ -41,13 +41,25 @@ void MainWindow::on_AddFileButton_clicked()
 
 void MainWindow::on_ValidateButton_clicked()
 {
+    messageBox=new ProgressMessageBox();
+    messageBox->show();
     for(int i=0;i<ui->listWidget->count();i++){
+        messageBox->setFileLabelName(ui->listWidget->item(i)->text());
         parsePIMSFile(ui->listWidget->item(i)->text());
     }
+
+    messageBox->close();
+    delete messageBox;
 }
 
 void MainWindow::parsePIMSFile(QString fileName)
 {
-    qDebug() << fileName;
+    //return from the function if the file is an incorrect format (i.e. not csv)
+    if(!fileName.contains(".csv")){
+        return;
+    }
+
+
+
 }
 

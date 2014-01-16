@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include <QFileDialog>
 #include <QDebug>
+#include <QMessageBox>
+#include "ProgressMessageBox.h"
 
 namespace Ui {
 class MainWindow;
@@ -26,6 +28,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    ProgressMessageBox *messageBox;
 
     //private functions
     void parsePIMSFile(QString fileName);
