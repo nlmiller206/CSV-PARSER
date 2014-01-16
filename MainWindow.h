@@ -22,8 +22,13 @@ private slots:
 
     void on_AddFileButton_clicked();
 
+    void on_ValidateButton_clicked();
+
 private:
     Ui::MainWindow *ui;
+
+    //private functions
+    void parsePIMSFile(QString fileName);
 };
 
 #endif // MAINWINDOW_H

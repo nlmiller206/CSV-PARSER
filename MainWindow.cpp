@@ -38,3 +38,16 @@ void MainWindow::on_AddFileButton_clicked()
     }
 
 }
+
+void MainWindow::on_ValidateButton_clicked()
+{
+    for(int i=0;i<ui->listWidget->count();i++){
+        parsePIMSFile(ui->listWidget->item(i)->text());
+    }
+}
+
+void MainWindow::parsePIMSFile(QString fileName)
+{
+    qDebug() << fileName;
+}
+
