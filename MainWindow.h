@@ -5,6 +5,8 @@
 #include <QFileDialog>
 #include <QDebug>
 #include <QMessageBox>
+#include <QFile>
+#include <QTextStream>
 #include "ProgressMessageBox.h"
 
 namespace Ui {
